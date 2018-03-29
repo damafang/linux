@@ -1,0 +1,37 @@
+#!/bin/bash
+# redirecting all output to a file
+exec 1>>testout
+
+date=$(date)
+
+echo "The date and time are:" $date
+
+echo "This is a test of redirecing all output"
+
+echo "from a script to another file."
+
+echo "without hacing to redirect every individual line" 
+
+#redirecting outout to different locations
+
+exec 2>>testerror
+
+date=$(date)
+
+echo $date >&2 
+
+echo "This is the start of the script"
+
+echo "now redirecting all output to another location"
+ 
+exec 1>>testout
+
+date=$(date)
+
+
+echo "This output should go to the testout file"
+
+echo "but this should go to the testerror file" >&2
+
+echo $date >&2
+

@@ -1,0 +1,59 @@
+#!/bin/bash
+#set -v
+#set -x
+
+# 
+
+function Daily {
+	clear
+	cd d:/work/Daily
+	ls -rtl
+}
+
+function Document {
+	clear
+	cd d:/work/Document
+	cat 联系人.txt
+}
+
+function func1 {
+	clear
+	cd d:/linux/
+	./test1
+
+}
+
+
+function menu {
+	clear
+	echo
+	echo -e "\t\t\tSys Admin Menu\n"
+	echo -e "\t1. Display Daily'查看日志文件'"
+	echo -e "\t2. Display Document'查看文档'"
+	echo -e "\t3. Display Func1'测试接口'"
+	echo -e "\t0. Exit program'退出'\n\n"
+	echo -en "\t\tEnter option: "
+	read -n 1 option
+}
+
+
+while [ 1 ]
+do
+	menu
+	case $option in 
+	0)
+		break ;;
+	1)
+		Daily ;;
+	2)
+		Document ;;
+	3)
+		func1 ;;
+	*)
+		clear
+		echo "Sorry, wrong selection";;
+	esac
+	echo -en "\n\n\t\t\tHit any key to continue"
+	read -n 1 line
+done
+clear

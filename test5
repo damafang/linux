@@ -1,0 +1,18 @@
+#!/bin/bash
+#testing=$(date)
+#echo "The date and time are:" $testing
+#jump_directory=d:/*
+IFS=$'\n'
+for file in d:/linux/*  
+do
+	if [ -d "$file" ]
+	then
+		echo "$file is a directory"
+	elif [ -f "$file" ]
+	then
+		echo "$file is a file"
+	else
+		echo "$file doesn't exist"
+	fi
+done
+

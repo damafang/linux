@@ -1,0 +1,5 @@
+./test8:行6: 未预期的符号 `&' 附近有语法错误
+./test8:行6: `echo "The date and time are:" $date >>&2'
+This is an error
+The date and time are: 2018年02月28日 10:59:55
+This is an error

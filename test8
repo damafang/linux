@@ -1,0 +1,9 @@
+#!/bin/bash
+# testing STDERR messages
+
+date=$(date)
+echo "The date and time are:" $date >&2
+echo $date
+echo "This is an error" >&2
+echo "This is normal output"
+#./test8 2>test9

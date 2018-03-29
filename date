@@ -1,0 +1,17 @@
+#!/bin/bash
+testing=$(date)
+echo "The date and time are:" $testing
+
+	echo "这是一个日期脚本 $state"
+year=$(date +"%y") #年 
+month=$(date +"%m") #月份
+days=$( date +"%j") #已过去的天数
+weeks=$(date +"%U") #一年中的第几周,周日为一周的开始
+week=$(date +"%w")  #一年中的第几周，周一为一周的开始
+time=$(date +"%s") #时间戳 
+	
+echo "20$year年,$month月份，本年度已过$days天!,今年的第$weeks周,星期$week。$time秒"
+
+date1=$(date -d"30weeks10day")
+
+	echo "预计周期$date1"

@@ -1,0 +1,60 @@
+#!/bin/bash
+# using select un the menu
+
+function year {
+	clear
+	date +"%Y" 
+}
+
+function month {
+	clear
+	date +"%m"
+}
+
+function weeks {
+	clear
+	date +"%U"
+}
+
+#function days {		#Not Enabled	
+#	clear
+#	date +"%j"
+#}
+
+#function date {		#Not Enabled
+#	clear
+#	date 
+#}
+
+#function cal {		#Not Enabled
+#	clear
+#	cal
+#}
+
+PS3="Enter option: "
+select option in "Display year" "Display month" "Display weeks" "Display days" "Display date" "Display calendar" "Exit program"
+do
+	case $option in
+	"Exit program")
+		break ;;
+	"Display year")
+		year ;;  
+	"Display month")
+		month ;; 
+	"Display weeks")
+		weeks ;;  
+	"Display days")
+	       cal -j ;; 
+	"Display date")
+		date ;;
+	"Display calendar")
+	    cal 2018 ;;
+	*)
+	 
+	
+		clear
+		echo "Sorry, wrong selection";; 
+	esac
+done
+clear 
+ 
